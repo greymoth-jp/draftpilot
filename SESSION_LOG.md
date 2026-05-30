@@ -121,3 +121,29 @@
 6. ENCRYPTION_KEY: `openssl rand -hex 32`
 7. CRON_SECRET: `openssl rand -hex 32`
 8. icon-192.png / icon-512.png 生成
+
+---
+
+# SESSION_LOG — 2026-05-30 Marketing Batch (Phase A–F)
+
+## Phase A — Screenshot Script
+- `scripts/gen-screenshots.mjs` placed (Playwright, 3 devices)
+- Pages: /, /pricing, /about, /help
+
+## Phase B — Screenshot Execution
+- **PENDING_USER: dev server env 不足、user 手動**
+- 12/12 shots: ERR_NAME_NOT_RESOLVED (draftpilot.dev not live)
+- Re-run after Vercel deploy + DNS: `node scripts/gen-screenshots.mjs`
+
+## Phase C — Metadata Fixes
+- app/layout.tsx: OG + Twitter card images added ✅
+- icons[] block: favicon-32/16, icon-192, icon-512, apple-touch-icon ✅
+- `twitter.creator: '@greymoth_jp'` ✅
+
+## Phase D — Marketing Assets
+- `public/marketing/feature-graphic-1024x500.png` ✅ (SVG→Sharp)
+- `public/marketing/og-1200x630.png` ✅ (SVG→Sharp)
+- Icon set: icon-1024/512/192/apple-touch/favicon-32/16.png ✅ (gen-icons.mjs)
+
+## Phase F — Commit + Push
+- Committed and pushed to origin/main ✅
