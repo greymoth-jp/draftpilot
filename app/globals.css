@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────
+   draftpilot brand tokens
+   Dream pop minimal · Deep slate + soft mint + warm cream
+   Dark-only. No light mode.
+   ───────────────────────────────────────────────────────── */
+
+:root {
+  /* surfaces */
+  --canvas:           #08090c;
+  --surface-1:        #0e1018;
+  --surface-2:        #13151f;
+  --surface-3:        #181b27;
+  --hairline:         #22263a;
+  --hairline-strong:  #2e3450;
+
+  /* ink */
+  --ink:              #f0f1f5;
+  --ink-muted:        #c8cdd8;
+  --ink-subtle:       #7d8499;
+  --ink-tertiary:     #555c73;
+
+  /* pilot accents — soft mint */
+  --pilot-primary:    #4ecdc4;
+  --pilot-glow:       #7feae4;
+  --pilot-deep:       #1a4a47;
+
+  /* warm cream accent */
+  --cream:            #f5e6c8;
+  --cream-muted:      #d4c4a8;
+
+  /* semantic */
+  --success:          #4ecdc4;
+  --warning:          #f5a623;
+  --danger:           #e05555;
+
+  /* fonts */
+  --font-sans:        'Inter', system-ui, sans-serif;
+  --font-serif:       'Lora', Georgia, serif;
+  --font-mono:        'JetBrains Mono', ui-monospace, monospace;
+
+  color-scheme: dark;
+}
+
+html, body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+/* selection */
+::selection {
+  background: color-mix(in srgb, var(--pilot-primary) 30%, transparent);
+  color: var(--ink);
+}
+
+.hairline {
+  border-color: var(--hairline);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Mobile scroll */
+body {
+  overscroll-behavior: none;
+}
+
+input, button, a {
+  touch-action: manipulation;
+}
+
+input {
+  font-size: 16px; /* prevent iOS auto-zoom */
+}

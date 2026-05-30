@@ -1,0 +1,22 @@
+{
+  "name": "@greymoth-jp/draftpilot-mcp",
+  "version": "0.1.0",
+  "description": "draftpilot MCP server — X tweet drafting from Claude Code",
+  "main": "dist/index.js",
+  "bin": {
+    "draftpilot-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "ts-node": "^10",
+    "@types/node": "^20"
+  }
+}
